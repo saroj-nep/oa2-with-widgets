@@ -10,7 +10,7 @@ $dbss=array();
 $dbss['host']='localhost';      // Database host (in most cases 'localhost', on Windows systems - use '127.0.0.1' instead of 'localhost' to avoid a php/ipv6 bug)
 $dbss['user']='root';      // Database user
 $dbss['pass']='';      // Database password
-$dbss['name']='chat';      // Database name. Note that the installation script cannot create a database for you!
+$dbss['name']='edu_tech3';      // Database name. Note that the installation script cannot create a database for you!
 $dbss['sock']='';      // Database socket
 $dbss['prfx']='blabax';      // Table prefix for chat tables: blab, blabws, blabax, blabwspro
 
