@@ -1,0 +1,25 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: mars.rz.uni-saarland.de
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        dry-run: true
+        server-dir: ./home/99/s8ahchan/test/
+        protocol: sftp
+        exclude: .git*
+          - **.git*
+          - .git*/**
+          -  **/.git*/**
+          - node_modules/**
+          - node_modules/**/*
